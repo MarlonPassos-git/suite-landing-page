@@ -24,15 +24,21 @@
     <section class="solution">
       <div class="solution__texts">
         <h1 class="solution__title">
-          A <span>super solution</span> for your <span>business.</span>
+          A <span>super <span class="curveSolution">solution</span></span> for your <span>business.</span>
         </h1>
-        <p>
+        <p class="solution__paragraph">
           Our marketing and sales automations help you scale your outreach to get more leads for your company.
         </p>
-        <button class="button solution__button ">
+        <button class="button solution__button">
           Request Beta Access
         </button>
       </div>
+
+      <picture class="solution__picture">
+        <source media="(max-width: 375px)" srcset="./images/image-hero-landscape.webp">
+        <source media="(min-width: 375px)" srcset="./images/image-hero-portrait.webp">
+        <img src="./images/image-hero-landscape.webp" alt="" class="solution__img">
+      </picture>
 
       <ul class="solution__list">
         <li class="solutionList__item">
