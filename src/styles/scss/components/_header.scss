@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: progressiveClamp(96, 156);
+
+}
+
+.header__button {
+  height: progressiveClamp(48, 56, $_breakpoint-mobile, $_breakpoint-tablet);
+  width: progressiveClamp(182, 219, $_breakpoint-mobile, $_breakpoint-tablet);
+  border: rem(1) solid $darkBlue;
+
+  font-size: rem(16);
+  line-height: rem(32);
+  letter-spacing: rem(-0.16);
+  color: $darkBlue;
+  
+  &:hover {
+    background-color: $darkBlue;
+    color: $creamWhite;
+  }
+}

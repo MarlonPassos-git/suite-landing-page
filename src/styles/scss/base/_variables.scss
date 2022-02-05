@@ -1,0 +1,38 @@
+
+
+// breakpoints 
+
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1440px;
+$_breakpoint-mobile: 375;
+$_breakpoint-tablet: 768;
+$_breakpoint-desktop: 1440;
+
+// Colors 
+
+$darkBlue: #172339;
+$grey: #49566D;
+$cream: #F3EDE7;
+$creamWhite: #FAF8F6;
+$violet: #a060ff;
+$magenta: #CB30E3;
+$orange: #FFA84E;
+
+// Sizes 
+
+
+  $padding-containes: progressiveClamp(16, 40);
+
+  @media (min-width: $breakpoint-mobile) {
+    $padding-containes: progressiveClamp(40, 165, $_breakpoint-tablet);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    $padding-containes: progressiveClamp(165, 166, $_breakpoint-desktop, $_breakpoint-desktop + 2);
+  }
+
+
+
+
+

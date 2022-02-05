@@ -1,0 +1,29 @@
+@function _Rem(  $number, $reminPX: $REM) {
+    @return calc($number / $reminPX);
+}
+
+$REM: 16;
+$MOBILE_WIDTH: 375;
+$DESKTOP_WIDTH: 1440;
+
+@function progressive($minSizePx, $maxSizePx, $minWidthPx: $MOBILE_WIDTH, $maxWidthPx: $DESKTOP_WIDTH) {
+     $minSize: _Rem($minSizePx);
+     $maxSize: _Rem($maxSizePx);
+     $minWidth: _Rem($minWidthPx);
+     $maxWidth: _Rem($maxWidthPx);
+     $slope: calc(($maxSize - $minSize) / ($maxWidth - $minWidth));
+     $yAxisIntersection: (-1 * $minWidth) * $slope + $minSize;
+     $slopeVW: $slope * 100 * 1vw;
+     $yAxisIntersectionRem: $yAxisIntersection * 1rem;
+    
+    @return calc( #{$yAxisIntersectionRem}  + #{$slopeVW}  );
+}
+
+@function progressiveClamp($minSizePx, $maxSizePx, $minWidthPx: $MOBILE_WIDTH, $maxWidthPx: $DESKTOP_WIDTH) {
+     $minSize: min($minSizePx, $maxSizePx);
+     $maxSize: max($minSizePx, $maxSizePx);
+     $minSizeRem: _Rem($minSize);
+     $maxSizeRem: _Rem($maxSize);
+
+    @return max(#{$minSizeRem * 1rem}, min(#{progressive($minSizePx, $maxSizePx, $minWidthPx, $maxWidthPx)}, #{$maxSizeRem * 1rem}))
+}
