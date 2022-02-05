@@ -1,0 +1,46 @@
+@import "./texts";
+@import "./list";
+@import "./picture";
+
+.solution {
+  height: rem(990);
+  margin: 
+    progressiveClamp(60, 40, $_breakpoint-mobile, $_breakpoint-tablet) 
+    0
+    progressiveClamp(237, 273, $_breakpoint-mobile, $_breakpoint-tablet)
+  ;
+  display: grid;
+  grid-template: 
+    "texts"
+    "img"
+    "list"
+  ;
+  row-gap: rem(56);
+
+
+
+  @media (min-width: $breakpoint-mobile) {
+    height: rem(653);
+
+    grid-template: 
+      "texts"
+      "list"
+    ;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    height: rem(600);
+    margin: 
+      progressiveClamp(40, 17, $_breakpoint-tablet) 
+      0
+      progressiveClamp(237, 273, $_breakpoint-tablet)
+    ;
+    grid-template: 
+      "texts list"
+    ;
+  }
+}
+
+
+
+

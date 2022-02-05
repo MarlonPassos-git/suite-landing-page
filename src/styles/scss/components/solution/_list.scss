@@ -1,0 +1,45 @@
+.solution__list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(32);
+  align-self: center;
+  text-align: center;
+
+  @media (min-width: $breakpoint-mobile) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    row-gap: rem(63);
+  }
+
+}
+
+.solutionList__item {
+  width: 100%;
+
+  @media (min-width: $breakpoint-mobile) {
+    max-width: progressiveClamp(223, 190, $_breakpoint-tablet);
+    
+  }
+}
+
+.solutionList__value {
+  font-size: rem(48);
+  line-height: rem(56);
+  font-weight: bold;
+
+
+}
+
+.solutionList__description {
+  font-size: rem(16);
+  line-height: rem(26);
+  letter-spacing: rem(2.5);
+
+}

@@ -1,0 +1,30 @@
+.solution__picture {
+  grid-area: img;
+  width: 100%;
+  height: rem(240);
+  border-radius: rem(15);
+  overflow: hidden;
+
+
+  @media (min-width: $breakpoint-mobile) {
+    grid-area: texts;
+    justify-self: end;
+    width: progressiveClamp(281, 350, $_breakpoint-tablet);
+    height: 100%;
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    margin-right: rem(96);
+  }
+
+  img {
+    object-fit: cover;
+    height: rem(240);
+    width: 100%;
+
+    @media (min-width: $breakpoint-mobile) {
+      height: 100%;
+    }
+  }
+  
+}
