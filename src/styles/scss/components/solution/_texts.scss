@@ -1,0 +1,50 @@
+.solution__texts {
+  grid-area: texts;
+  z-index: 5;
+  
+  @media (min-width: $breakpoint-mobile) {
+    margin-top: progressiveClamp(88, 103);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    
+
+  }
+
+}
+
+.solution__title { 
+  
+  font-size: progressiveClamp(38, 72);
+  line-height: progressiveClamp(44, 78);
+  letter-spacing: progressiveClamp(-0.53, 1);
+  max-width: 17ch;
+
+
+  span {
+    font-weight: bold;
+  }
+
+}
+
+.solution__paragraph {
+  max-width: 34ch;
+  margin: rem(40) 0 rem(52);
+  font-size: progressiveClamp(18, 16, 768);
+  line-height: progressiveClamp(28, 32, 768);
+
+}
+
+.solution__button {
+  height: rem(61);
+  width: rem(256);
+
+  background: $darkBlue;
+  color: $creamWhite;
+
+  transition: color 5s;
+
+  &:hover {
+    background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+  }
+}
