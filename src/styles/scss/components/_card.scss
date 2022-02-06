@@ -8,6 +8,8 @@
   width: 100vw;
   transform:  translateX(progressiveClamp(-16, -40, 375, 769));
   column-gap: rem(152);
+  z-index: 5;
+  position: relative;
 
   @media (min-width: $breakpoint-mobile) {
     transform: none;
