@@ -15,7 +15,9 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
+    margin-top: rem(-18);
     row-gap: rem(63);
+    width: progressiveClamp(223, 190, $_breakpoint-tablet);
   }
 
 }
@@ -25,7 +27,6 @@
 
   @media (min-width: $breakpoint-mobile) {
     max-width: progressiveClamp(223, 190, $_breakpoint-tablet);
-    
   }
 }
 

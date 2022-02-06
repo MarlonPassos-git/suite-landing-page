@@ -71,7 +71,7 @@
     @media (min-width: $breakpoint-tablet) { 
       bottom: 50%;
       left: 100%;
-      transform: translate(rem(35), rem(-30));
+      transform: translate(rem(35), rem(-35));
     }
   }
 }
@@ -95,7 +95,7 @@
   @media (min-width: $breakpoint-tablet) {
     text-align: left;
     min-height: rem(369);
-    width: rem(350);
+    width: rem(352);
     align-self: center;
   }
 }
@@ -124,6 +124,7 @@
   font-size: rem(18);
   line-height: rem(32);
   letter-spacing: rem(-0.18);
+  font-weight: bold;
 }
 
 .card__location {

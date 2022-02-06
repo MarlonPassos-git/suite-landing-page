@@ -11,13 +11,13 @@ body > * {
   
 
   @media (min-width: 769px) {
-    $padding: progressiveClamp(40, 165, $_breakpoint-tablet);
+    $padding: progressiveClamp(40, 158, 769);
     padding-left: $padding;
     padding-right: $padding; 
   }
 
   @media (min-width: 1440px) {
-    $padding: progressive(165, 166, $_breakpoint-desktop, $_breakpoint-desktop + 2);
+    $padding: progressive(158, 159, 1440, 1442);
     padding-left: $padding;
     padding-right: $padding; 
   }

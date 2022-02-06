@@ -42,7 +42,7 @@
 
 .footer__logo {
   width: rem(81);
-  height: rem(32); 
+  height: rem(26); 
 }
 
 .footer__socialNetworks {
@@ -52,12 +52,16 @@
 }
 
 .footer__socialNetwork {
-  height: rem(20);
-  width: rem(20); 
+  
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 
   &:hover {
     filter: brightness(0) saturate(100%) invert(58%) sepia(8%) saturate(288%) hue-rotate(186deg) brightness(92%) contrast(87%);
+  }
+
+  img {
+    height: rem(20);
+    width: rem(20); 
   }
 }

@@ -33,10 +33,11 @@
     margin: 
       progressiveClamp(40, 17, $_breakpoint-tablet) 
       0
-      progressiveClamp(237, 273, $_breakpoint-tablet)
+      progressiveClamp(237, 198, $_breakpoint-tablet)
     ;
     grid-template: 
       "texts list"
+      / 1fr auto
     ;
   }
 }

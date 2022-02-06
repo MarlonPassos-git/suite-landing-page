@@ -17,9 +17,8 @@
   
   font-size: progressiveClamp(38, 72);
   line-height: progressiveClamp(44, 78);
-  letter-spacing: progressiveClamp(-0.53, 1);
+  letter-spacing: progressiveClamp(-0.53, -1);
   max-width: 17ch;
-
 
   span {
     font-weight: bold;
@@ -30,7 +29,7 @@
 .solution__paragraph {
   max-width: 34ch;
   margin: rem(40) 0 rem(52);
-  font-size: progressiveClamp(18, 16, 768);
+  font-size: progressiveClamp(16, 18, 768);
   line-height: progressiveClamp(28, 32, 768);
 
 }
@@ -41,7 +40,9 @@
 
   background: $darkBlue;
   color: $creamWhite;
-
+  font-size: rem(18);
+  letter-spacing: rem(-0.18);
+  line-height: rem(32);
   transition: color 5s;
 
   &:hover {
