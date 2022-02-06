@@ -1,0 +1,132 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: progressiveClamp(748, 684, 375, 769);
+  background-color: $darkBlue;
+  padding: 0 progressiveClamp(16, 123);
+  border-radius: rem(16);
+  width: 100vw;
+  transform:  translateX(progressiveClamp(-16, -40, 375, 769));
+  column-gap: rem(152);
+
+  @media (min-width: $breakpoint-mobile) {
+    transform: none;
+    width: 100%;
+  }
+  
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    height: rem(545);
+    
+  }
+}
+
+.card__picture {
+  margin: rem(-181) auto rem(117);
+  justify-self: center;
+  flex-shrink: 6;
+  width: rem(252);
+  height: rem(402);
+  object-fit: contain;
+  object-position: bottom;
+  position: relative;
+  z-index: 10;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: rem(360);
+    height: rem(590);
+    margin: 0;  
+    transform: translateY(rem(-45));
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background-image: url(../../images/pattern-blur.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center rem(90);
+    z-index: -1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + rem(45)));
+    background-image: url(../../images/pattern-curved-line-2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: rem(64);
+    height: rem(52);
+
+    @media (min-width: $breakpoint-tablet) { 
+      bottom: 50%;
+      left: 100%;
+      transform: translate(rem(35), rem(-30));
+    }
+  }
+}
+
+.card__img {
+  width: rem(252);
+  height: rem(402);
+  object-fit: contain;
+  object-position: bottom;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: rem(360);
+    height: rem(590);
+  }
+}
+
+.card__blockquote {
+  flex-shrink: 4;
+  text-align: center;
+
+  @media (min-width: $breakpoint-tablet) {
+    text-align: left;
+    min-height: rem(369);
+    width: rem(350);
+    align-self: center;
+  }
+}
+
+.card__title {
+  font-size: progressiveClamp(40, 48, 769);
+  line-height: progressiveClamp(48 ,56, 769);
+  letter-spacing: progressiveClamp(-0.42, -0.5, 769);
+  color: $creamWhite;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.card__paragraph {
+  color: $cream;
+  font-size: progressiveClamp(18, 20, 769);
+  line-height: progressiveClamp(32 ,35, 769);
+  letter-spacing: progressiveClamp(0.09, 0.1, 769);
+  margin: rem(40) 0;
+}
+
+.card__name {
+  color: $creamWhite;
+  font-size: rem(18);
+  line-height: rem(32);
+  letter-spacing: rem(-0.18);
+}
+
+.card__location {
+  color: $cream;
+  font-size: rem(16);
+  line-height: rem(26);
+  letter-spacing: rem(2.5);
+}

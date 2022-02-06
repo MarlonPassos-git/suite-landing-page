@@ -6,18 +6,18 @@ body {
 
 body > * {
 
-  $padding: progressiveClamp(16, 40);
+  $padding: progressiveClamp(16, 40, 375, 769);
   padding-left: $padding;
   padding-right: $padding;
   
 
-  @media (min-width: $breakpoint-mobile) {
+  @media (min-width: 769px) {
     $padding: progressiveClamp(40, 165, $_breakpoint-tablet);
     padding-left: $padding;
     padding-right: $padding; 
   }
 
-  @media (min-width: $breakpoint-desktop) {
+  @media (min-width: 1440px) {
     $padding: progressive(165, 166, $_breakpoint-desktop, $_breakpoint-desktop + 2);
     padding-left: $padding;
     padding-right: $padding; 

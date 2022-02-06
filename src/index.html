@@ -70,10 +70,14 @@
 
 
     <section class="card">
-      <img src="" alt="person" class="card__img">
+      <picture class="card__picture">
+        <source media="(max-width: 520px)" srcset="./images/image-jeremy-small.webp">
+        <source media="(min-width: 520px)" srcset="./images/image-jeremy-large.webp">
+        <img src="./images/image-jeremy-large.webp" alt="car" class="card__img">
+      </picture>
       <blockquote class="card__blockquote">
         <h2 class="card__title">
-          It just works.
+          It just <span>works.</span>
         </h2>
         <p class="card__paragraph">
           “I really like how it is an all-in-one solution that handle many of the tasks that you would normally need
@@ -87,13 +91,11 @@
         </p>
       </blockquote>
     </section>
+
   </main>
+
   <footer class="footer">
-    <picture class="footer__picture">
-      <source media="(min-width: 768px)" srcset="./images/image-jeremy-small.webp">
-      <source media="(max-width: 768px)" srcset="./images/image-jeremy-large.webp">
-      <img src="./images/image-jeremy-large.webp" alt="car" class="footer__img">
-    </picture>
+
     <p class="footer__copyright">
       Copyright - Suite
     </p>
