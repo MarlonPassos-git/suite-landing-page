@@ -1,20 +1,17 @@
 .solution__texts {
   grid-area: texts;
   z-index: 5;
-  
+
   @media (min-width: $breakpoint-mobile) {
     margin-top: progressiveClamp(88, 103);
   }
 
-  @media (min-width: $breakpoint-tablet) {
-    
-
-  }
+  @media (min-width: $breakpoint-tablet) {}
 
 }
 
-.solution__title { 
-  
+.solution__title {
+
   font-size: progressiveClamp(38, 72);
   line-height: progressiveClamp(44, 78);
   letter-spacing: progressiveClamp(-0.53, -1);
@@ -47,5 +44,7 @@
 
   &:hover {
     background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
+    animation: gradientButton 4s infinite linear;
+
   }
 }
