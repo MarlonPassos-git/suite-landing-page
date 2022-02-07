@@ -22,7 +22,7 @@
   letter-spacing: rem(-0.16);
   color: $darkBlue;
   
-  &:hover {
+  &:hover, &:focus-visible {
     background-color: $darkBlue;
     color: $creamWhite;
   }

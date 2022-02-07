@@ -42,7 +42,7 @@
   line-height: rem(32);
   transition: color 5s;
 
-  &:hover {
+  &:hover, &:focus-visible {
     background: linear-gradient(135deg, #A060FF 0%, #CB30E3 49.21%, #FFA84E 100%);
     animation: gradientButton 4s infinite linear;
 

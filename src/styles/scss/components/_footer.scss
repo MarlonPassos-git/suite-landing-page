@@ -56,7 +56,7 @@
   cursor: pointer;
   transition: color 0.2s ease-in-out;
 
-  &:hover {
+  &:hover, &:focus-visible {
     filter: brightness(0) saturate(100%) invert(58%) sepia(8%) saturate(288%) hue-rotate(186deg) brightness(92%) contrast(87%);
   }
 
