@@ -3,7 +3,7 @@
 
 
 <h2>Preview</h2>
-<img align="center"  class="img__project " src="./github/gif.gif">
+<img width="830"align="center"  class="img__project " src="./github/gif.gif">
 
 <br>
 
